@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(30, 87, 82);
+    text-align: center;
+    color: rgb(196, 238, 234);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: rgb(94, 212, 143);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(155, 162, 224);
+    text-decoration: line-through;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: rgb(155, 162, 224);
+    width: 700px;
+}
+
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 120px;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(30, 87, 82);
+}
+
+ul {
+    padding-left: 40%;
+    text-align: left;
+}
+
+.prom-pic {
+    width: 300px;
+    height: auto;
+}
