@@ -28,7 +28,13 @@ main {
     padding-bottom: 120px;
     max-width: 700px;
     width: 95%;
+    text-align: center;
 
+}
+
+div {
+    width: 95%;
+    margin: 0 auto;
 }
 
 footer {
@@ -37,11 +43,6 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: rgb(30, 87, 82);
-}
-
-ul {
-    padding-left: 40%;
-    text-align: left;
 }
 
 .prom-pic {
