@@ -9,19 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Preston Murray's | Peculiar Muskox | ITIS3135 | Home</h1>
-        <hr>
-        <nav>
-            <a href="./">Home</a>
-            |
-            <a href="introduction.html">Introduction</a>
-            |
-            <a href="contract.html">Contract</a>
-            |
-            <a href="afternoonpmllc.com/">Afternoon P.M. LLC</a>
-            |
-            <a href="peculiarmuskox/">Peculiar Muskox</a>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
     <hr>
     <main>
@@ -29,36 +17,14 @@
         <p>Hello, you've made it to my ITSC3135 Course page</p>
     </main>
     <footer>
-        <hr>
-        <nav>
-            <a href="https://webpages.charlotte.edu/pmurra16/">Charlotte.edu</a>
-            |
-            <a href="https://github.com/pmurray7134">Github</a>
-            |
-            <a href="https://pmurray7134.github.io/">Github.io</a>
-            |
-            <a href="https://pmurray7134.github.io/itis3135/">Course.io</a>
-            |
-            <a href="https://www.freecodecamp.org/pmurra16">freeCodeCamp</a>
-            |
-            <a href="https://www.codecademy.com/profiles/beta2092900008">Codecademy</a>
-            |
-            <a href="https://www.linkedin.com/in/preston-murray-0b8764298/">LinkedIn</a>
-        </nav>
-        <p>Page Built by <a href="afternoonpmllc.com/">Afternoon P.M. LLC </a>&copy;2025</p>
-        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-            <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-            <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
-        </a>
-        <hr>
-        <script>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
             document.getElementByID("validation_link_html").setAttribute("href" , "https://validator.w3.org/check?url=" + location.href);
             document.getElementByID("validation_link_css").setAttribute("href" , "https://jigsaw.w3.org/css-validator/validator?url=" + location.href);
-        </script>
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 
-    </footer>
 </body>
 
 </html>
