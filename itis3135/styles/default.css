@@ -2,7 +2,12 @@ body {
     background-color: rgb(30, 87, 82);
     text-align: center;
     color: rgb(196, 238, 234);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px; /* base size for desktop */
+    line-height: 1.6;
 }
 
 a {
@@ -19,16 +24,15 @@ hr {
     border: none;
     height: 3px;
     background-color: rgb(155, 162, 224);
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
 }
 
 main {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto;              /* centers horizontally */
     padding-bottom: 120px;
-    max-width: 700px;
-    width: 95%;
-
+    max-width: 1200px;           /* prevents content from being too wide */
+    width: 90%;                  /* flexible width */
 }
 
 footer {
@@ -37,6 +41,8 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: rgb(30, 87, 82);
+    padding: 10px 0;
+    font-size: 0.9em;
 }
 
 ul {
@@ -47,4 +53,56 @@ ul {
 .prom-pic {
     width: 300px;
     height: auto;
+    max-width: 100%;
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+    body {
+        font-size: 16px; /* slightly smaller for tablets */
+    }
+
+    main {
+        max-width: 90%;
+        width: 95%;
+    }
+
+    ul {
+        padding-left: 20%;
+    }
+
+    .prom-pic {
+        width: 250px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* smaller for mobile */
+    }
+
+    main {
+        width: 100%;
+        padding-bottom: 40px; /* less padding since footer isn't fixed */
+    }
+
+    ul {
+        padding-left: 10%;
+    }
+
+    .prom-pic {
+        width: 200px;
+    }
+
+    hr {
+        max-width: 90%;
+    }
+
+    footer {
+        position: static;   /* removes fixed footer */
+        font-size: 0.85em;
+    }
 }
