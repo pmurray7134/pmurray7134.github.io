@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Site | Hobby Page</title>
+<style>
+section{
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: left;
+}
+
+section.active {
+display: flex;
+}
+
+body {
+margin: 0;
+font-family: "Segoe UI", Arial, sans-serif;
+background-color: #fdfdfd;
+color: #222;
+}
+
+header {
+background-color: #20232a;
+color: #f0f0f0;
+padding: 1rem;
+text-align: center;
+}
+
+header h1 {
+margin: 0.5rem 0;
+font-size: 2.5rem;
+}
+
+nav#base, nav#secondary {
+margin: 0.5rem 0;
+font-size: 1rem;
+}
+
+nav a {
+color: #61dafb;
+text-decoration: none;
+margin: 0 0.25rem;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+}
+
+nav#hobby {
+margin: 1rem 0;
+}
+
+nav#hobby button {
+background-color: #61dafb;
+color: #20232a;
+border: none;
+border-radius: 8px;
+padding: 0.5rem 1rem;
+margin: 0.25rem;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+nav#hobby button:hover {
+background-color: #4fbde3;
+}
+
+section {
+width: 80%;
+max-width: 800px;
+background-color: #ffffff;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+padding: 2rem;
+box-sizing: border-box;
+}
+
+section h2 {
+color: #20232a;
+font-size: 2rem;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+section p {
+font-size: 1.2rem;
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+
+figure {
+text-align: center;
+}
+
+figure img {
+border-radius: 8px;
+margin-bottom: 0.5rem;
+max-width: 100%;
+height: auto;
+}
+
+figcaption {
+font-size: 1rem;
+color: #555;
+}
+
+ul {
+font-size: 1.2rem;
+list-style-type: disc;
+margin-left: 2rem;
+}
+
+footer {
+background-color: #20232a;
+color: #f0f0f0;
+text-align: center;
+padding: 1rem;
+font-size: 0.9rem;
+}
+
+footer nav a {
+color: #61dafb;
+text-decoration: none;
+}
+
+footer nav a:hover {
+text-decoration: underline;
+}
+
+footer img {
+vertical-align: middle;
+margin: 0.5rem;
+}
+
+hr {
+border: 0;
+border-top: 2px solid #61dafb;
+margin: 0.5rem 0;
+} </style>
+
+</head>
+<body>
+<header>
+    <h1>Music Production</h1>
+    <hr>
+    <nav id="base">
+        <a href="../">Home</a> |
+        <a href="../introduction.html">Introduction</a> |
+        <a href="../contract.html">Contract</a> |
+        <a href="../afternoonpmllc.com/">Afternoon P.M. LLC</a> |
+        <a href="../peculiarmuskox/about.html">Peculiar Muskox</a> |
+        <a href="../website_evaluations.html">CRAP Website Evaluations</a>
+    </nav>
+    <nav id="secondary">
+        <a href="../stuff/THis IS Sooooooooooo 😮.htm">CRAPPY PAGE!!!</a> |
+        <a href="index.html">Hobby Page</a>
+    </nav>
+</header>
+<main>
+    <nav id="hobby">
+        <button onclick="showPage('who')">Who</button>
+        <button onclick="showPage('what')">What</button>
+        <button onclick="showPage('when')">When</button>
+        <button onclick="showPage('where')">Where</button>
+        <button onclick="showPage('why')">Why</button>
+        <button onclick="showPage('how')">How</button>
+        <button onclick="showPage('prompts')">AI Prompts</button>
+    </nav>
+
+<script>
+    function showPage(id) {
+        document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+        showPage("what");
+    });
+</script>
+
+<section id="who">
+    <h2>Who</h2>
+    <p>... Me! My name is Preston Murray, I am a junior Computer Science student here at UNCC. Music has always been a large part of my life, I did band in middle school, continued with music lessons in high school, and now do production work as a hobby!</p>
+    <figure>
+        <img src="images/me.JPG" alt="pic of me" width="400">
+        <figcaption>Me before senior prom, enjoying life getting ready for a fun night.</figcaption>
+    </figure>
+</section>
+
+<section id="what">
+    <h2>What</h2>
+    <p>I love seeing how different sounds and ideas can come together and create something beautiful, and while I wouldn't say I'm necessarily very good, I very much enjoy doing this. I use the AKAI MPKmini to accomplish this, which is small enough to take with me wherever I go, but has anough options to still be useful in multiple ways.</p>
+    <figure>
+        <img src="images/keyboard.jpg" alt="keyboard" width="500">
+        <figcaption>My faithful keyboard, which has been with me since the start and still works very well.</figcaption>
+    </figure>
+</section>
+
+<section id="when">
+    <h2>When</h2>
+    <p>While most of my time goes to homework, I have always loved music and got into music production during my senior ear of high school.</p>
+    <figure>
+        <img src="images/clock.jpg" alt="clock" id="clock" width="400">
+        <figcaption>An AI generated version of a clock, representing the fact that I have limited time to work on music production. I don't own a clock, so I generated one. I used the prompt, "clock".</figcaption>
+    </figure>
+</section>
+
+<section id="where">
+    <h2>Where</h2>
+    <p>My keyboard means I can really work on music anywhere! However, my desk is where I spend most of time for school work, and the trend continues for music production. I have a monitor riser that I use to store the keyboard when I'm not using it, and I can easily pul it out whenever I need it.</p>
+    <figure>
+        <img src="images/setup.JPG" alt="setup" width="500">
+        <figcaption>My desk at my apartment. Not really much else to say here.</figcaption>
+    </figure>
+</section>
+
+<section id="why">
+    <h2>Why</h2>
+    <p>Music has always been a large part of my life, and while I'm no longer in band or taking lessons, I still really enjoy music. I'm always listening to music, and being able to make my is very rewarding and fun.</p>
+    <figure>
+        <img src="images/distorted.JPG" alt="distorted" width="400">
+        <figcaption>A very distorted picture of me and some friends having fun dancing to music.</figcaption>
+    </figure>
+</section>
+
+<section id="how">
+    <h2>How</h2>
+    <p>DAWS are used for music production. I use LMMS, which is very bare bones and doesn't have many of the features others do, but it's free so no complaints here. I've gotten used to it and have found creative workarounds for completing more complicated tasks like synth creation.</p>
+    <figure>
+        <img src="images/lmms.png" alt="lmms" width="500">
+        <figcaption>A screenshot of an empty project on LMMS.</figcaption>
+    </figure>
+</section>
+
+<section id="prompts">
+    <h2>AI Prompts</h2>
+    <ul>
+        <li>Prompt: clock
+            <p>used to generate the image of a clock</p>
+        </li>
+    </ul>
+</section>
+
+</main>
+<footer>
+    <hr>
+    <nav>
+        <a href="https://webpages.charlotte.edu/pmurra16/">Charlotte.edu</a> |
+        <a href="https://github.com/pmurray7134">Github</a> |
+        <a href="https://pmurray7134.github.io/">Github.io</a> |
+        <a href="https://pmurray7134.github.io/itis3135/">Course.io</a> |
+        <a href="https://www.freecodecamp.org/pmurra16">freeCodeCamp</a> |
+        <a href="https://www.codecademy.com/profiles/beta2092900008">Codecademy</a> |
+        <a href="https://www.linkedin.com/in/preston-murray-0b8764298/">LinkedIn</a>
+    </nav>
+    <p>Page Built by <a href="afternoonpmllc.com/">Afternoon P.M. LLC </a>&copy;2025</p>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML.">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS.">
+    </a>
+    <hr>
+</footer>
+</body>
+</html>
