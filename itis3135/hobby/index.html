@@ -29,20 +29,22 @@ section.active {
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f3f4f6;
+    background-color: #f2f3f5;
     color: #111;
 }
 
 header {
-    background-color: #1b1f24;
+    background-color: #131825;
     color: #ffffff;
-    padding: 1rem;
+    padding: 1.25rem 1rem;
     text-align: center;
+    font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
 }
 
 header h1 {
     margin: 0.5rem 0;
     font-size: 2.5rem;
+    letter-spacing: 0.5px;
 }
 
 nav#base, nav#secondary {
@@ -51,15 +53,17 @@ nav#base, nav#secondary {
 }
 
 nav a {
-    color: #0078d7;
+    color: #ffcb32;
     text-decoration: none;
-    margin: 0 0.25rem;
-    font-weight: 500;
+    margin: 0 0.4rem;
+    font-weight: 700;
+    transition: color 0.2s, text-shadow 0.2s;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    color: #005fa3;
+nav a:hover,
+nav a:focus {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffcb32;
 }
 
 main {
@@ -70,11 +74,11 @@ main {
 }
 
 nav#hobby {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 nav#hobby button {
-    background-color: #0078d7;
+    background-color: #005fa3;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -82,15 +86,25 @@ nav#hobby button {
     margin: 0.25rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
+    font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
-nav#hobby button:hover {
-    background-color: #005fa3;
+nav#hobby button:hover,
+nav#hobby button:focus {
+    background-color: #003f73;
+    transform: translateY(-2px);
+}
+
+nav#hobby button.active {
+    background-color: #ffcb32;
+    color: #16181d;
 }
 
 section h2 {
-    color: #1b1f24;
+    color: #16181d;
+    font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -126,21 +140,25 @@ ul {
 }
 
 footer {
-    background-color: #1b1f24;
+    background-color: #131825;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
 }
 
 footer nav a {
-    color: #0078d7;
+    color: #ffcb32;
     text-decoration: none;
+    margin: 0 0.4rem;
+    font-weight: bold;
 }
 
-footer nav a:hover {
-    text-decoration: underline;
-    color: #005fa3;
+footer nav a:hover,
+footer nav a:focus {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffcb32;
 }
 
 footer img {
@@ -150,10 +168,11 @@ footer img {
 
 hr {
     border: 0;
-    border-top: 2px solid #0078d7;
+    border-top: 2px solid #ffcb32;
     margin: 0.5rem 0;
 }
 </style>
+
 
 
 </head>
