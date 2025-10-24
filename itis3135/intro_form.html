@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+    <link rel="stylesheet" href="styles/intro.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("components/header.html"); 
+        $("#footer").load("components/footer.html"); 
+        });
+    </script> 
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+    <h2>Introduction Form</h2>
+    <h3>Please submit the form below.</h3>
+
+    <form id="introForm">
+      <fieldset>
+        <legend>Basic Information</legend>
+
+        <label>First Name:
+          <input type="text" name="firstName" placeholder="Enter first name" required>
+        </label><br>
+
+        <label>Middle Name/Initial:
+          <input type="text" name="middleName" placeholder="Enter middle name or initial">
+        </label><br>
+
+        <label>Nickname/Preferred Name:
+          <input type="text" name="nickname" placeholder="Enter preferred name">
+        </label><br>
+
+        <label>Last Name:
+          <input type="text" name="lastName" placeholder="Enter last name" required>
+        </label><br>
+
+        <label>Acknowledgment Statement:
+          <input type="text" name="ackStatement" placeholder="Type your acknowledgment" required>
+        </label><br>
+
+        <label>Acknowledgment Date:
+          <input type="date" name="ackDate" required>
+        </label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mascot Info</legend>
+
+        <label>Mascot Adjective:
+          <input type="text" name="mascotAdj" placeholder="e.g., Fearless" required>
+        </label><br>
+
+        <label>Mascot Animal:
+          <input type="text" name="mascotAnimal" placeholder="e.g., Panther" required>
+        </label><br>
+
+        <label>Divider:
+          <input type="text" name="divider" placeholder="e.g., ~ or |" value="~" required>
+        </label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Image</legend>
+
+        <label>Picture:
+            <input type="file" name="picture" id="pictureInput" accept="image/*">
+        </label><br>
+
+        <img id="previewImage" src="images/image_123650291.JPG" alt="Default image" style="max-width:200px; border-radius:8px; display:block; margin-top:0.5rem;">
+
+        <label>Picture Caption:
+            <input type="text" name="caption" placeholder="Describe your image">
+        </label><br>
+    </fieldset>
+
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label>Personal Statement:
+          <textarea name="personalStatement" placeholder="Write a short personal statement" required>I'm a student at UNC Charlotte studying ITIS3135...</textarea>
+        </label><br>
+
+        <label>7 Main Bullets:
+          <textarea name="mainBullets" placeholder="List your 7 bullets (Personal Background, etc.)" required></textarea>
+        </label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Courses</legend>
+        <div id="coursesContainer">
+          <div class="course">
+            <label>Department:
+              <input type="text" name="dept" placeholder="e.g., ITIS" required>
+            </label>
+            <label>Number:
+              <input type="text" name="number" placeholder="e.g., 3135" required>
+            </label>
+            <label>Name:
+              <input type="text" name="courseName" placeholder="e.g., Web-Based App Design" required>
+            </label>
+            <label>Reason:
+              <input type="text" name="reason" placeholder="Why you’re taking it" required>
+            </label>
+          </div>
+        </div>
+        <button type="button" id="addCourseBtn">Add Course</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Quotes & Extras</legend>
+        <label>Quote:
+          <input type="text" name="quote" placeholder="Enter your favorite quote" required>
+        </label><br>
+
+        <label>Quote Author:
+          <input type="text" name="quoteAuthor" placeholder="Enter author name" required>
+        </label><br>
+
+        <label>Funny Thing:
+          <input type="text" name="funnyThing" placeholder="Something funny (optional)">
+        </label><br>
+
+        <label>Something I'd like to share:
+          <textarea name="somethingToShare" placeholder="Optional message"></textarea>
+        </label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Links</legend>
+        <label>Link 1:
+          <input type="url" name="link1" placeholder="e.g., LinkedIn URL">
+        </label><br>
+        <label>Link 2:
+          <input type="url" name="link2" placeholder="e.g., GitHub URL">
+        </label><br>
+        <label>Link 3:
+          <input type="url" name="link3" placeholder="Another link">
+        </label><br>
+        <label>Link 4:
+          <input type="url" name="link4" placeholder="Another link">
+        </label><br>
+        <label>Link 5:
+          <input type="url" name="link5" placeholder="Another link">
+        </label><br>
+      </fieldset>
+
+      <div class="form-controls">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="clear">Clear</button>
+      </div>
+    </form>
+
+    <div id="submittedContent"></div>
+  </main>
+    <div id="footer"></div>
+</body>
+</html>
