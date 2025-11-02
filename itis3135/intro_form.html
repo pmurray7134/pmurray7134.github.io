@@ -16,6 +16,8 @@
         $("#footer").load("components/footer.html"); 
         });
     </script> 
+    <script src="scripts/generate_html.js" defer></script>
+    <script src="scripts/generate_json.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
@@ -156,6 +158,8 @@
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="clear">Clear</button>
+        <button type="button" id="generateHtmlBtn">Generate HTML</button>
+        <button type="button" id="generateJsonBtn">Generate JSON</button>
       </div>
     </form>
 
