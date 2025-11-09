@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do-It Do-It-Done | Post Study Plan</title>
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main class="post-page">
+    <section class="post-section">
+      <h2>Create a Study Plan</h2>
+      <p>Enter your assignment or task details below to add it to your calendar.</p>
+
+      <form id="studyForm" class="study-form">
+        <div class="form-group">
+          <label for="title">Task Title <span>*</span></label>
+          <input type="text" id="title" name="title" placeholder="e.g., Math Homework" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date <span>*</span></label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" placeholder="Optional details..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Task</button>
+      </form>
+
+      <div id="confirmation" class="confirmation-message hidden">
+        <p>✅ Task added successfully! You can view it on your <a href="calendar.html">Calendar</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/calendar.js"></script>
+  <script src="scripts/post.js"></script>
+  <script src="scripts/include.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar | Do-It Do-It-Done</title>
+  <link rel="stylesheet" href="styles/project.css" />
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h1>Assignment Calendar</h1>
+    <p>This calendar displays your current and upcoming assignments.</p>
+
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="prevMonth" class="btn">&lt;</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonth" class="btn">&gt;</button>
+      </div>
+      <div class="calendar-days"></div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/include.js"></script>
+  <script src="scripts/calendar.js"></script>
+</body>
+</html>
