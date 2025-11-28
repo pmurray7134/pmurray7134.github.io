@@ -367,3 +367,57 @@ button:hover, .btn:hover {
   color: #cee4eb;
   margin-top: 2px;
 }
+
+
+
+/* Light mode (default) */
+body {
+  background: #def0ff;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #080527; 
+  color: #eee;
+}
+
+body.dark-mode header {
+  background-color: #0a1a40;
+}
+
+body.dark-mode footer {
+  background-color: #0a1a40;
+}
+
+body.dark-mode main {
+  background-color: #0a1a40;
+}
+
+body.dark-mode h2 {
+  color: #3358df;
+}
+
+/* Style the button */
+.theme-btn {
+  margin-left: 15px;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+body.dark-mode .assignment {
+    background-color: #1a1a40; /* dark but distinguishable */
+    color: #eee;               /* text readable */
+}
+
+body.dark-mode .assignment.completed {
+    color: #aaa;               /* lighter gray for completed */
+    background-color: #0f0f30;
+}
+
+body.dark-mode .theme-btn {
+    color: #fff; /* ensure visible on dark header */
+}

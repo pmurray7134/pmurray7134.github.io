@@ -1,46 +1,25 @@
-// include.js — dynamically loads header/footer components
-document.addEventListener("DOMContentLoaded", () => {
-  const includes = document.querySelectorAll("[data-include]");
-
-  includes.forEach(async (el) => {
-    const file = el.getAttribute("data-include");
-    try {
-      const response = await fetch(file);
-      if (!response.ok) throw new Error(`Could not load ${file}`);
-      const content = await response.text();
-      el.innerHTML = content;
-    } catch (err) {
-      console.error(err);
-      el.innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
-    }
-  });
-});
-
+// include.js — loads header/footer, then runs headerInit()
 
 document.addEventListener("DOMContentLoaded", async () => {
   const includes = document.querySelectorAll("[data-include]");
 
+  // Load all includes (header, footer, etc.)
   for (const el of includes) {
     const file = el.getAttribute("data-include");
+
     try {
-      const response = await fetch(file);
-      if (!response.ok) throw new Error(`Could not load ${file}`);
-      const content = await response.text();
-      el.innerHTML = content;
+      const response = await fetch(file, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Failed to load ${file}`);
+      const html = await response.text();
+      el.innerHTML = html;
     } catch (err) {
       console.error(err);
       el.innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
     }
   }
 
-  // 🟢 Highlight the active link AFTER header/footer are loaded
-  const currentPage = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll("nav a");
-
-  navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href === currentPage) {
-      link.classList.add("active");
-    }
-  });
+  // 🔥 IMPORTANT: Now that the header is loaded, run the header JS
+  if (typeof window.headerInit === "function") {
+    window.headerInit();
+  }
 });
